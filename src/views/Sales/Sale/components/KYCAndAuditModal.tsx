@@ -70,7 +70,7 @@ const KYCAndAuditModal: React.FC<React.PropsWithChildren<DepositModalProps>> = (
         <Flex alignItems="center" mb="10px">        
           <Text ml="10px">To enhance trust and security for your presale, you can request the addition of KYC (Know Your Customer) and Audit badges. These badges will display prominently on your project, signaling to potential investors that your project has undergone thorough verification.</Text>
         </Flex>
-          <Text ml="10px" color="yellow">Telegram: @Pattieswap</Text>  
+          <Text ml="10px" color="yellow">Telegram: @fairbidai</Text>  
 
       </Box>
       <Flex alignItems="center" mb="10px" onClick={() => setKycService(!kycService)}>

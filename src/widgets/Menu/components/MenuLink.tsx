@@ -13,7 +13,7 @@ const MenuLink: React.FC<React.PropsWithChildren<MenuLinkProps>> = ({ isActive, 
   const { isMobile } = useMatchBreakpoints();
   const { linkComponent } = useContext(MenuContext);
   const menuItemRef = useRef<HTMLDivElement>(null);
-  const link = href === "/docs" ? "https://pattie-pattiepad-organization.gitbook.io/pattiepad-launchpad/" : href;
+  const link = href === "/docs" ? "https://fairbidai-fairbidai-organization.gitbook.io/fairbidai-launchpad/" : href;
   const target = href === "/docs"? "_blank" : "";
   const itemLinkProps: any = link
   ? {

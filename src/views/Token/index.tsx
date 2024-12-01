@@ -24,7 +24,7 @@ export const StyledAppBody = styled(Card)`
 const Launchpad: React.FC<React.PropsWithChildren> = () => {
   const [modalView, setModalView] = useState<TokenFormView>(TokenFormView.Create)
 
-  const [ tokenData, setTokenData ] = useState<TokenData>({
+  const [tokenData, setTokenData] = useState<TokenData>({
     name: "",
     symbol: "",
     decimals: "",
@@ -48,12 +48,12 @@ const Launchpad: React.FC<React.PropsWithChildren> = () => {
               Create Your Token
             </Text>
             <Text my="24px">
-            PattiePad is a decentralized launchpad, securing its position as the leading platform for users to initiate their own tokens and orchestrate personalized initial token sales, all without the requirement of coding expertise.
+              FairBid AI is a decentralized launchpad, securing its position as the leading platform for users to initiate their own tokens and orchestrate personalized initial token sales, all without the requirement of coding expertise.
             </Text>
             <Flex>
               <Button
                 as={NextLinkFromReactRouter}
-                to="https://pattie-pattiepad-organization.gitbook.io/pattiepad-launchpad/products/pattiepad/tokens"
+                to="https://fairbidai-fairbidai-organization.gitbook.io/fairbidai-launchpad/products/fairbidai/tokens"
                 target="_blink"
                 variant="secondary"
                 height="48px"
@@ -67,13 +67,13 @@ const Launchpad: React.FC<React.PropsWithChildren> = () => {
             </Flex>
           </Flex>
           {/* <Box maxWidth="290px">
-            <img src="/images/pattie/Tokens.png" alt="sales" />
+            <img src="/images/fairbidai/Tokens.png" alt="sales" />
           </Box> */}
         </Flex>
       </PageHeader>
       <StyledAppBody my="24px">
         {
-          modalView === TokenFormView.Create && 
+          modalView === TokenFormView.Create &&
           <VerifyTokenForm
             setModalView={setModalView}
             tokenData={tokenData}
@@ -82,7 +82,7 @@ const Launchpad: React.FC<React.PropsWithChildren> = () => {
           />
         }
         {
-          modalView === TokenFormView.Finish && 
+          modalView === TokenFormView.Finish &&
           <FinishForm
             setModalView={setModalView}
             tokenData={tokenData}

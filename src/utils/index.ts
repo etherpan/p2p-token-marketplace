@@ -52,14 +52,14 @@ export function getOnListSwapLink(data: string | number | undefined | null, toke
   if(data === routers[ChainId.BSC][1].value) {
     swapLink = `https://pancakeswap.finance/swap?outputCurrency=${token}`
   } else {
-    swapLink = `https://pattieswap.finance/swap?outputCurrency=${token}`
+    swapLink = `https://fairbidai.finance/swap?outputCurrency=${token}`
   }
   
   return swapLink;
 }
 
 export function getRouterName(data: string | number | undefined | null) {
-  let routerName = "PattieSwap Router";
+  let routerName = "fairbidai Router";
   for (let i = 0; i < routers[ChainId.BSC].length; i++) {
     if(data === routers[ChainId.BSC][i].value) {
       routerName = routers[ChainId.BSC][i].label

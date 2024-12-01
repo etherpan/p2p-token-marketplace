@@ -21,18 +21,18 @@ export const footerLinks: FooterLinkType[] = [
         label: "Community",
         href: "https://docs.cyberglow.finance",
       },
-      {
-        label: "CAKE",
-        href: "https://docs.cyberglow.finance/tokenomics/cgt-token",
-      },
+      // {
+      //   label: "CAKE",
+      //   href: "https://docs.cyberglow.finance/tokenomics/cgt-token",
+      // },
       {
         label: "—",
       },
-      {
-        label: "Online Store",
-        href: "https://pancakeswap.creator-spring.com/",
-        isHighlighted: true,
-      },
+      // {
+      //   label: "Online Store",
+      //   href: "https://pancakeswap.creator-spring.com/",
+      //   isHighlighted: true,
+      // },
     ],
   },
   {
@@ -40,15 +40,15 @@ export const footerLinks: FooterLinkType[] = [
     items: [
       {
         label: "Customer",
-        href: "Support https://docs.pancakeswap.finance/contact-us/customer-support",
+        href: "Support https://docs.fairbid.finance/contact-us/customer-support",
       },
       {
         label: "Troubleshooting",
-        href: "https://docs.pancakeswap.finance/help/troubleshooting",
+        href: "https://docs.fairbid.finance/help/troubleshooting",
       },
       {
         label: "Guides",
-        href: "https://docs.pancakeswap.finance/get-started",
+        href: "https://docs.fairbid.finance/get-started",
       },
     ],
   },
@@ -61,7 +61,7 @@ export const footerLinks: FooterLinkType[] = [
       },
       {
         label: "Documentation",
-        href: "https://docs.pancakeswap.finance",
+        href: "https://docs.fairbid.finance",
       },
       {
         label: "Bug Bounty",
@@ -69,11 +69,11 @@ export const footerLinks: FooterLinkType[] = [
       },
       {
         label: "Audits",
-        href: "https://docs.pancakeswap.finance/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited",
+        href: "https://docs.fairbid.finance/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited",
       },
       {
         label: "Careers",
-        href: "https://docs.pancakeswap.finance/hiring/become-a-chef",
+        href: "https://docs.fairbid.finance/hiring/become-a-chef",
       },
     ],
   },

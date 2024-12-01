@@ -14,9 +14,9 @@ export const noopStorage = {
 }
 
 const metadata = {
-  name: 'PattiePad - Crypto LaunchPad 100% Decentralized Web 3.0 IDO Launchpad On Binance Network & Solana.',
-  description: 'Description: PattiePad Launchpad is a Web 3.0 decentralized IDO launchpad on BSC and Solana network that allows users to launch their own token and create their own initial token sale and listing on Multiple Network.',
-  url: 'https://app.pattiepad.com', // origin must match your domain & subdomain
+  name: 'FairBid AI - Crypto LaunchPad 100% Decentralized Web 3.0 IDO Launchpad On Base Network & Solana.',
+  description: 'Description: FairBid P2P Token Launchpad is a Web 3.0 decentralized IDO launchpad on BSC and Solana network that allows users to launch their own token and create their own initial token sale and listing on Multiple Network.',
+  url: 'https://app.fairbidai.com', // origin must match your domain & subdomain
   icons: ['https://avatars.githubusercontent.com/u/37784886']
 }
 

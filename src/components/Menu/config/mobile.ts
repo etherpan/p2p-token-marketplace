@@ -33,11 +33,11 @@ const config: (
       href: '',
       showItemsOnMobile: true,
       items: [
-        {
-          label: 'Swap',
-          href: 'https://pattieswap.finance/',
-          type: DropdownMenuItemType.EXTERNAL_LINK
-        },
+        // {
+        //   label: 'Swap',
+        //   href: 'https://fairbid.finance/',
+        //   type: DropdownMenuItemType.EXTERNAL_LINK
+        // },
         // {
         //   label: 'Pool',
         //   href: '/pool',
@@ -50,10 +50,10 @@ const config: (
         //   label: 'Bonds',
         //   href: '/bonds',
         // },
-        {
-          label: 'Launchpad',
-          href: '/launchpad',
-        },
+        // {
+        //   label: 'Launchpad',
+        //   href: '/launchpad',
+        // },
         {
           label: 'Token Creator',
           href: '/token',

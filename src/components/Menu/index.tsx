@@ -38,20 +38,20 @@ const Menu = (props) => {
         rightSide={
           <>
             {/* <GlobalSettings mode={SettingsMode.GLOBAL} /> */}
-            {!isMobile && 
-            <Button
+            {/* {!isMobile &&
+              <Button
                 as={NextLinkFromReactRouter}
-                to="https://pattiepresale.com"
+                to="https://fairbid.com"
                 variant="secondary"
                 height="32px"
                 mr="12px"
                 target='_blank'
               >
-              <Flex alignItems="center" justifyContent="center" width="100%" p="12px">
-                <Box>Buy Pattie</Box>
-              </Flex>
-            </Button>
-          }
+                <Flex alignItems="center" justifyContent="center" width="100%" p="12px">
+                  <Box>Buy fairbidai</Box>
+                </Flex>
+              </Button>
+            } */}
             <ConnectWalletButton />
           </>
         }

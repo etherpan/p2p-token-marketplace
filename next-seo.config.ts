@@ -1,19 +1,19 @@
 import { DefaultSeoProps } from 'next-seo'
 
 export const SEO: DefaultSeoProps = {
-  titleTemplate: '%s | PATTIEPAD',
-  defaultTitle: 'PATTIEPAD',
+  titleTemplate: '%s | FAIRBID',
+  defaultTitle: 'FAIRBID',
   description:
-    'PattiePad Launchpad is a Web 3.0 decentralized IDO launchpad on BSC and Solana network that allows users to launch their own token and create their own initial token sale and listing on Multiple Network',
+    'FairBid P2P Token Marketplace is a Web 3.0 decentralized Token Marketplace on Base network.',
   twitter: {
     cardType: 'summary_large_image',
     handle: '@',
     site: '@',
   },
   openGraph: {
-    title: 'PattiePad - Crypto LaunchPad 100% Decentralized Web 3.0 IDO Launchpad On Binance Network & Solana.',
+    title: 'FairBid - Crypto Marketplace 100% Decentralized Web 3.0 Marketplace On Base Network.',
     description:
-      'PattiePad Launchpad is a Web 3.0 decentralized IDO launchpad on BSC and Solana network that allows users to launch their own token and create their own initial token sale and listing on Multiple Network',
-    images: [{ url: 'https://app.pattiepad.com/logo.png' }],
+      'FairBid P2P Token Marketplace is a Web 3.0 decentralized Marketplace on BSC network.',
+    images: [{ url: 'https://app.fairbid.com/logo.png' }],
   },
 }

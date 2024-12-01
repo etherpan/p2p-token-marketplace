@@ -8,7 +8,7 @@ export const fee: ChainMap<string> = {
 export const routers: ChainMap<any> = {
 	[ChainId.BSC]: [
 		{
-			label: "PattieSwap Router",
+			label: "fairbidai Router",
 			value: "0x3c49457b9BF1E0C4Df6B0a23bD794D7DC2fCCECe",
 		},
 		{

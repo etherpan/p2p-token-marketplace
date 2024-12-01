@@ -64,24 +64,24 @@ const config: (
     //   showItemsOnMobile: false,
     //   items: [].map((item) => addMenuItemSupported(item, chainId)),
     // },
+    // {
+    //   label: 'Swap',
+    //   href: 'https://fairbid.finance/',      
+    //   icon: EarnIcon,
+    //   fillIcon: EarnFillIcon,
+    //   image: '/images/decorations/pe2.png',
+    //   type: DropdownMenuItemType.EXTERNAL_LINK
+    // },
+    // {
+    //   label: 'Launchpad',
+    //   href: '/launchpad',
+    //   icon: EarnIcon,
+    //   fillIcon: EarnFillIcon,
+    //   image: '/images/decorations/pe2.png',
+    //   items: [].map((item) => addMenuItemSupported(item, chainId)),
+    // },
     {
-      label: 'Swap',
-      href: 'https://pattieswap.finance/',      
-      icon: EarnIcon,
-      fillIcon: EarnFillIcon,
-      image: '/images/decorations/pe2.png',
-      type: DropdownMenuItemType.EXTERNAL_LINK
-    },
-    {
-      label: 'Launchpad',
-      href: '/launchpad',
-      icon: EarnIcon,
-      fillIcon: EarnFillIcon,
-      image: '/images/decorations/pe2.png',
-      items: [].map((item) => addMenuItemSupported(item, chainId)),
-    },
-    {
-      label: 'Tools',
+      label: 'P2P Marketplace',
       href: '/token',
       icon: MultisenderIcon,
       fillIcon: MultisenderIcon,

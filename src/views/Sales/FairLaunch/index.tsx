@@ -32,7 +32,7 @@ const CreateFairLaunch: React.FC<React.PropsWithChildren> = () => {
   const native = useNativeCurrency()
   const { chainId } = useActiveChainId()
 
-  const [ tokenData, setTokenData ] = useState<TokenData>({
+  const [tokenData, setTokenData] = useState<TokenData>({
     tokenAddress: "",
     tokenName: "",
     tokenDecimals: 0,
@@ -51,8 +51,8 @@ const CreateFairLaunch: React.FC<React.PropsWithChildren> = () => {
     maximumBuy: "",
     router: routers[chainId][0].value,
     liquidity: "",
-    startTime: new Date(Date.now() + 24*3600*1000).toISOString().substring(0, 19),
-    endTime: new Date(Date.now() + 6*24*3600*1000).toISOString().substring(0, 19),
+    startTime: new Date(Date.now() + 24 * 3600 * 1000).toISOString().substring(0, 19),
+    endTime: new Date(Date.now() + 6 * 24 * 3600 * 1000).toISOString().substring(0, 19),
     lockTime: "",
     totalAmount: "0",
     // isVesting: false,
@@ -78,7 +78,7 @@ const CreateFairLaunch: React.FC<React.PropsWithChildren> = () => {
     description: "",
   })
 
-  const [presale, setPresale] = useState<FinishData>({address: ""})
+  const [presale, setPresale] = useState<FinishData>({ address: "" })
 
   return (
     <Page>
@@ -86,10 +86,10 @@ const CreateFairLaunch: React.FC<React.PropsWithChildren> = () => {
         <Flex width="100%" justifyContent="space-between" flexDirection={["column", null, "row"]}>
           <Flex maxWidth="500px" p="24px" flexDirection="column">
             <Text fontSize="32px">
-            PattiePad
+              FairBid AI
             </Text>
             <Text my="24px">
-            PattiePad is a decentralized launchpad, securing its position as the leading platform for users to initiate their own tokens and orchestrate personalized initial token sales, all without the requirement of coding expertise.
+              FairBid AI is a decentralized launchpad, securing its position as the leading platform for users to initiate their own tokens and orchestrate personalized initial token sales, all without the requirement of coding expertise.
             </Text>
             <Flex>
               <Button
@@ -116,13 +116,13 @@ const CreateFairLaunch: React.FC<React.PropsWithChildren> = () => {
             </Flex>
           </Flex>
           <Box maxWidth="400px" mt="20px">
-            <img src="/images/pattie/Sales.png" alt="sales" style={{maxWidth: 240}} />
+            <img src="/images/fairbidai/Sales.png" alt="sales" style={{ maxWidth: 240 }} />
           </Box>
         </Flex>
       </PageHeader>
       <StyledAppBody mb="24px">
         {
-          modalView === LaunchpadFormView.VerifyToken && 
+          modalView === LaunchpadFormView.VerifyToken &&
           <VerifyTokenForm
             setModalView={setModalView}
             tokenData={tokenData}
@@ -130,7 +130,7 @@ const CreateFairLaunch: React.FC<React.PropsWithChildren> = () => {
           />
         }
         {
-          modalView === LaunchpadFormView.DeFiInfo && 
+          modalView === LaunchpadFormView.DeFiInfo &&
           <InformationForm
             setModalView={setModalView}
             tokenData={tokenData}
@@ -139,7 +139,7 @@ const CreateFairLaunch: React.FC<React.PropsWithChildren> = () => {
           />
         }
         {
-          modalView === LaunchpadFormView.Socials && 
+          modalView === LaunchpadFormView.Socials &&
           <SocialsForm
             setModalView={setModalView}
             deFiData={deFiData}
@@ -148,7 +148,7 @@ const CreateFairLaunch: React.FC<React.PropsWithChildren> = () => {
           />
         }
         {
-          modalView === LaunchpadFormView.Review && 
+          modalView === LaunchpadFormView.Review &&
           <ReviewForm
             setModalView={setModalView}
             tokenData={tokenData}
@@ -158,7 +158,7 @@ const CreateFairLaunch: React.FC<React.PropsWithChildren> = () => {
           />
         }
         {
-          modalView === LaunchpadFormView.Finish && 
+          modalView === LaunchpadFormView.Finish &&
           <FinishForm
             setModalView={setModalView}
             setTokenData={setTokenData}

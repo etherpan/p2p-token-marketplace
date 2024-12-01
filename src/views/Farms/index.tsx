@@ -263,14 +263,14 @@ const Farms = () => {
           <Flex width="100%" justifyContent="space-between" flexDirection={["column", null, "row"]}>
             <Flex maxWidth="500px" p="24px" flexDirection="column">
               <Text fontSize="32px">
-                PattiePad Farms
+                Fairbid AI Farms
               </Text>
               <Text my="24px">
-                Yield farming is a popular method of earning rewards or interest by depositing cryptocurrency into a pool with other PattiePad users. PattiePad farms are specially designed to incentivize users to provide liquidity for their favorite token pairs.
+                Yield farming is a popular method of earning rewards or interest by depositing cryptocurrency into a pool with other FairBid AI users. FairBid AI farms are specially designed to incentivize users to provide liquidity for their favorite token pairs.
               </Text>
               <Button
                 as={NextLinkFromReactRouter}
-                to="https://pattie-pattiepad-organization.gitbook.io/pattiepad-launchpad/products/pattie-dex/yield-farming"
+                to="https://fairbidai-fairbidai-organization.gitbook.io/fairbidai-launchpad/products/fairbidai-dex/yield-farming"
                 target="_blink"
                 variant="secondary"
                 height="48px"
@@ -283,7 +283,7 @@ const Farms = () => {
               </Button>
             </Flex>
             <Box maxWidth="320px">
-              <img src="/images/pattie/Maximize-Earnings.png" alt="farms" />
+              <img src="/images/fairbidai/Maximize-Earnings.png" alt="farms" />
             </Box>
           </Flex>
         </PageHeader>

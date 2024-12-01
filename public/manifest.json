@@ -1,8 +1,8 @@
 {
-  "short_name": "PattiePad",
-  "name": "PattiePad",
-  "description": "Farm PAT with PattiePad LP Tokens",
-  "homepage_url": "https://pattiepad.com/",
+  "short_name": "FairBid AI",
+  "name": "FairBidAI",
+  "description": "P2P Token Marketplace on BASE Network",
+  "homepage_url": "https://fairbid.com/",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#1FC7D4",

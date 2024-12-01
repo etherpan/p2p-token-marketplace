@@ -7,9 +7,9 @@ export type PageMeta = {
 }
 
 export const DEFAULT_META: PageMeta = {
-  title: 'PattiePad',
+  title: 'FairbidMarketplace',
   description: 'Web 3.0 Crypto Launchpad',
-  image: `https://app.pattiepad.com/images/web/og/hero.jpg`,
+  image: `https://app.fairbid.com/images/web/og/hero.jpg`,
 }
 
 interface PathList {
@@ -21,26 +21,26 @@ const getPathList = (): PathList => {
   return {
     paths: {
       '/': { title: 'Home'},
-      '/swap': { basePath: true, title: 'Swap', image: `https://app.pattiepad.com/images/web/og/swap.jpg` },
-      '/add': { basePath: true, title: 'Add Pool', image: `https://app.pattiepad.com/images/web/og/liquidity.jpg` },
-      '/remove': { basePath: true, title: 'Remove Pool', image: `https://app.pattiepad.com/images/web/og/liquidity.jpg` },
-      '/pool': { title: 'Pool', image: `https://app.pattiepad.com/images/web/og/liquidity.jpg` },
+      '/swap': { basePath: true, title: 'Swap', image: `https://app.fairbidai.com/images/web/og/swap.jpg` },
+      '/add': { basePath: true, title: 'Add Pool', image: `https://app.fairbidai.com/images/web/og/liquidity.jpg` },
+      '/remove': { basePath: true, title: 'Remove Pool', image: `https://app.fairbidai.com/images/web/og/liquidity.jpg` },
+      '/pool': { title: 'Pool', image: `https://app.fairbidai.com/images/web/og/liquidity.jpg` },
       '/find': { title: 'Import Pool' },
-      '/earn': { title: 'Earn', image: `https://app.pattiepad.com/images/web/og/farms.jpg` },
+      '/earn': { title: 'Earn', image: `https://app.fairbidai.com/images/web/og/farms.jpg` },
       '/info': {
         title: "Overview - Info",
         description: 'View statistics for Pancakeswap exchanges.',
-        image: `https://app.pattiepad.com/images/web/og/info.jpg`,
+        image: `https://app.fairbidai.com/images/web/og/info.jpg`,
       },
       '/info/pairs': {
         title: 'Pairs - Info',
         description: 'View statistics for Pancakeswap exchanges.',
-        image: `https://app.pattiepad.com/images/web/og/info.jpg`,
+        image: `https://app.fairbidai.com/images/web/og/info.jpg`,
       },
       '/info/tokens': {
         title: "Tokens - Info",
         description: 'View statistics for Pancakeswap exchanges.',
-        image: `https://app.pattiepad.com/images/web/og/info.jpg`,
+        image: `https://app.fairbidai.com/images/web/og/info.jpg`,
       },
       '/multisend': { title: 'Multi-Sender' },
       '/multisend/history': { title: 'Multi-Send History' },
@@ -51,7 +51,7 @@ const getPathList = (): PathList => {
       '/lock/token': { basePath: true, title: 'View Token Lock' },
       '/lock/record/': { basePath: true, title: 'View Lock Info' },
     },
-    defaultTitleSuffix: 'PattiePad',
+    defaultTitleSuffix: 'FairBidAi',
   }
 }
 

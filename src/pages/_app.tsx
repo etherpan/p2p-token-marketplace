@@ -57,7 +57,7 @@ function MyApp(props: AppProps<{ initialReduxState: any; dehydratedState: any }>
         />
         <meta
           name="description"
-          content="PattiePad Launchpad is a Web 3.0 decentralized IDO launchpad on BSC and Solana network that allows users to launch their own token and create their own initial token sale and listing on Multiple Network."
+          content="FairBid P2P Token Launchpad is a Web 3.0 decentralized IDO launchpad on BSC and Solana network that allows users to launch their own token and create their own initial token sale and listing on Multiple Network."
         />
         <meta name="theme-color" content="#1FC7D4" />
         {(Component as NextPageWithLayout).mp && (

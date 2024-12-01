@@ -33,12 +33,12 @@ const SpeechBubble = styled.div`
   }
 `
 
-const domain = 'https://pattiepad.com'
+const domain = 'https://fairbid.com'
 
 const PhishingWarningBanner: React.FC<React.PropsWithChildren> = () => {
   const [, hideBanner] = usePhishingBanner()
   const { isMobile, isMd } = useMatchBreakpoints()
-  const warningTextAsParts = `please make sure you're visiting ${domain} - check the URL carefully.`.split(/(https:\/\/pattieswap.finance)/g)
+  const warningTextAsParts = `please make sure you're visiting ${domain} - check the URL carefully.`.split(/(https:\/\/fairbid.finance)/g)
   const warningTextComponent = (
     <>
       <Text as="span" color="white" small bold textTransform="uppercase">

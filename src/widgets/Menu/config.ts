@@ -21,12 +21,12 @@ export const socials = [
 	{
 		label: "Twitter",
 		icon: TwitterIcon,
-		href: "https://twitter.com/Pattieswap",
+		href: "https://twitter.com/fairbidai",
 	},
 	{
 		label: "Telegram",
 		icon: TelegramIcon,
-		href: "https://t.me/PattieswapChat"
+		href: "https://t.me/fairbidai"
 	},
 	// {
 	//   label: "Github",
@@ -46,6 +46,6 @@ export const socials = [
 	{
 		label: "Docs",
 		icon: ResourcesIcon,
-		href: "https://pattie-pattiepad-organization.gitbook.io/pattieswapdex",
+		href: "https://fairbidai-fairbidai-organization.gitbook.io/fairbidai",
 	},
 ];

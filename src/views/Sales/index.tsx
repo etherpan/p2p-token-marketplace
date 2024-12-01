@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import { useState, useMemo, useCallback, useEffect, useRef} from 'react'
+import { useState, useMemo, useCallback, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import {
@@ -30,7 +30,7 @@ const PageHeader = styled(Flex)`
   border-radius: 16px;
 `
 
-const StatCard =  styled(Flex)`
+const StatCard = styled(Flex)`
   align-items: center;
   background: ${({ theme }) => theme.colors.backgroundAlt};
   padding: 12px;
@@ -119,25 +119,27 @@ const Sales: React.FC<React.PropsWithChildren> = () => {
   const { query: urlQuery } = useRouter()
   const contract = useLaunchpadFactory()
   const totalLength = useSingleCallResult(
-    {contract,
+    {
+      contract,
       functionName: 'getContributionsLength',
-      args: []}
-    )?.result
+      args: []
+    }
+  )?.result
 
 
-    const [length, setLength] = useState(0);
-    useEffect(() => {
-      if(totalLength) {
-        setLength(Number(totalLength))
-      }
-    }, [totalLength])
-    const startPosition = length !== 0 ? (length >= NUMBER_OF_FARMS_VISIBLE ? (length - NUMBER_OF_FARMS_VISIBLE) : 0) : length;
-    
-    useEffect(() => {
-      setPosition(startPosition)
-    }, [startPosition])
-    
-    const [position, setPosition] = useState(startPosition)
+  const [length, setLength] = useState(0);
+  useEffect(() => {
+    if (totalLength) {
+      setLength(Number(totalLength))
+    }
+  }, [totalLength])
+  const startPosition = length !== 0 ? (length >= NUMBER_OF_FARMS_VISIBLE ? (length - NUMBER_OF_FARMS_VISIBLE) : 0) : length;
+
+  useEffect(() => {
+    setPosition(startPosition)
+  }, [startPosition])
+
+  const [position, setPosition] = useState(startPosition)
 
   const data = useLaunchpadList(chainId, BigInt(NUMBER_OF_FARMS_VISIBLE), BigInt(position))
 
@@ -225,7 +227,7 @@ const Sales: React.FC<React.PropsWithChildren> = () => {
         );
         const data_res: any = await response.json();
         setBnbPrice(data_res.binancecoin.usd); // Get BNB price in USD
-      } catch  {
+      } catch {
         console.log("error")
       }
     };
@@ -233,7 +235,7 @@ const Sales: React.FC<React.PropsWithChildren> = () => {
   }, []);
 
   useEffect(() => {
-    if (data?.[0]?.address !== oldData?.[0]?.address ){
+    if (data?.[0]?.address !== oldData?.[0]?.address) {
       const newData = data.filter((lp) => {
         const matchedData = activeData.filter((lp1) => lp1.address === lp.address && lp1.chainId === lp.chainId)
         if (matchedData.length > 0)
@@ -247,7 +249,7 @@ const Sales: React.FC<React.PropsWithChildren> = () => {
   }, [data, activeData, oldData])
 
   const handleLoad = () => {
-    if(position < NUMBER_OF_FARMS_VISIBLE) {
+    if (position < NUMBER_OF_FARMS_VISIBLE) {
       setPosition(0)
     } else {
       setPosition(position - NUMBER_OF_FARMS_VISIBLE)
@@ -256,19 +258,19 @@ const Sales: React.FC<React.PropsWithChildren> = () => {
 
   const getTotalRaisedAmount = () => {
     let totalAmount = 0;
-    
+
     // eslint-disable-next-line array-callback-return
     chosenLaunchpadsByType.map((launchpad) => {
       let amountInUsd = 0;
 
-      if(launchpad.buyToken === "0x0000000000000000000000000000000000000000") {
+      if (launchpad.buyToken === "0x0000000000000000000000000000000000000000") {
         amountInUsd = Number(launchpad.amount) * Number(bnbPrice);
       }
       else {
         amountInUsd = Number(launchpad.amount);
       }
-        totalAmount += Number(amountInUsd) / 10 ** Number(launchpad.tokenDecimals);
-      }
+      totalAmount += Number(amountInUsd) / 10 ** Number(launchpad.tokenDecimals);
+    }
     )
 
     return `${totalAmount.toFixed(2)} USD`;
@@ -280,10 +282,10 @@ const Sales: React.FC<React.PropsWithChildren> = () => {
         <Flex width="100%" justifyContent="space-between" flexDirection={["column", null, "row"]}>
           <Flex maxWidth="500px" p="24px" flexDirection="column">
             <Text fontSize="32px">
-            PattiePad
+              FairBid AI
             </Text>
             <Text my="24px">
-            PattiePad is a decentralized launchpad, securing its position as the leading platform for users to initiate their own tokens and orchestrate personalized initial token sales, all without the requirement of coding expertise.
+              FairBid AI is a decentralized launchpad, securing its position as the leading platform for users to initiate their own tokens and orchestrate personalized initial token sales, all without the requirement of coding expertise.
             </Text>
             <Flex>
               <Button
@@ -310,21 +312,21 @@ const Sales: React.FC<React.PropsWithChildren> = () => {
             </Flex>
           </Flex>
           <Box maxWidth="400px" mt="20px">
-            <img src="/images/pattie/Sales.png" alt="sales" style={{maxWidth: 240}} />
+            <img src="/images/fairbidai/Sales.png" alt="sales" style={{ maxWidth: 240 }} />
           </Box>
         </Flex>
       </PageHeader>
       <StatContainer>
         <StatCard>
           <Flex maxWidth="300px" flexDirection="column">
-              <Text fontSize="20px"> Total Liquidity Raised </Text>
-              <Text color='primary' textAlign="center" fontSize="20px"> {getTotalRaisedAmount()}</Text>
+            <Text fontSize="20px"> Total Liquidity Raised </Text>
+            <Text color='primary' textAlign="center" fontSize="20px"> {getTotalRaisedAmount()}</Text>
           </Flex>
         </StatCard>
         <StatCard>
-          <Flex maxWidth="300px" width="100%"  flexDirection="column">
-              <Text fontSize="20px" textAlign="center"> Total Projects </Text>
-              <Text color='primary' textAlign="center" fontSize="20px"> {chosenLaunchpadsByType && (chosenLaunchpadsByType.length)}</Text>
+          <Flex maxWidth="300px" width="100%" flexDirection="column">
+            <Text fontSize="20px" textAlign="center"> Total Projects </Text>
+            <Text color='primary' textAlign="center" fontSize="20px"> {chosenLaunchpadsByType && (chosenLaunchpadsByType.length)}</Text>
           </Flex>
         </StatCard>
       </StatContainer>
@@ -400,14 +402,14 @@ const Sales: React.FC<React.PropsWithChildren> = () => {
         </FilterContainer>
       </ControlContainer>
       <FlexLayout>
-        {chosenLaunchpadsByType && chosenLaunchpadsByType.length > 0 && chosenLaunchpadsByType.map((launchpad, index) => {          
-          
-          return  <LaunchpadCard
-          key={launchpad.address}
-          data={launchpad}
-        />
+        {chosenLaunchpadsByType && chosenLaunchpadsByType.length > 0 && chosenLaunchpadsByType.map((launchpad, index) => {
+
+          return <LaunchpadCard
+            key={launchpad.address}
+            data={launchpad}
+          />
         }
-          
+
         )}
       </FlexLayout>
       <Flex justifyContent="center">
@@ -423,9 +425,9 @@ const Sales: React.FC<React.PropsWithChildren> = () => {
       </Flex>
       <Box mt="40px">
         <Text>
-            Disclaimer: PattiePad will never endorse or encourage that you invest in any of the projects listed and therefore, accept no liability for any loss occasioned. It is the user(s) responsibility to do their own research and seek financial advice from a professional. More information about (DYOR) can be found via <a href='https://academy.binance.com/en/glossary/do-your-own-research' style={{color: "#FFAC26"}}>Binance Academy</a>.
+          Disclaimer: FairBid AI will never endorse or encourage that you invest in any of the projects listed and therefore, accept no liability for any loss occasioned. It is the user(s) responsibility to do their own research and seek financial advice from a professional. More information about (DYOR) can be found via <a href='https://academy.binance.com/en/glossary/do-your-own-research' style={{ color: "#FFAC26" }}>Binance Academy</a>.
         </Text>
-        <Box width="100%" mt="20px" style={{textAlign:"center"}}>
+        <Box width="100%" mt="20px" style={{ textAlign: "center" }}>
           <a href='https://www.certik.com' target='_blank' rel="noreferrer">
             <img src="/images/certik.png" width={240} alt='certik' />
           </a>

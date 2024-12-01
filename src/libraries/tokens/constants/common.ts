@@ -7,7 +7,7 @@ export const GTOKEN_ARB = new ERC20Token(
   18,
   'GTOKEN',
   'G Token',
-  'https://pattiepad.com/',
+  'https://fairbidai.com/',
 )
 
 export const USDC_ARB = new ERC20Token(

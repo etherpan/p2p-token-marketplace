@@ -71,7 +71,7 @@ function TradeSummary({
         <RowBetween>
           <RowFixed>
             <QuestionToolTip
-              text="Fees are applied to ensure the best experience with PattiePad, and have already been factored into this quote."
+              text="Fees are applied to ensure the best experience with FairBid AI, and have already been factored into this quote."
               placement="right-end"
             >
               <Text fontSize="14px" color="textSubtle">

@@ -25,10 +25,10 @@ export const StyledAppBody = styled(Card)`
 const MultisenderPage: React.FC<React.PropsWithChildren> = () => {
   const [modalView, setModalView] = useState<CryptoFormView>(CryptoFormView.Input)
 
-  const [ data, setData ] = useState<DataType[]>([])
+  const [data, setData] = useState<DataType[]>([])
 
-  const [ tag, setTag ] = useState<string>("")
-  
+  const [tag, setTag] = useState<string>("")
+
   const native = useNativeCurrency()
 
   const [currency, setCurrency] = useState<Currency | null>(() => native)
@@ -42,12 +42,12 @@ const MultisenderPage: React.FC<React.PropsWithChildren> = () => {
               Multi-Send Tokens
             </Text>
             <Text my="24px">
-              PattiePad is a decentralized launchpad, securing its position as the leading platform for users to initiate their own tokens and orchestrate personalized initial token sales, all without the requirement of coding expertise.
+              FairBid AI is a decentralized launchpad, securing its position as the leading platform for users to initiate their own tokens and orchestrate personalized initial token sales, all without the requirement of coding expertise.
             </Text>
             <Flex>
               <Button
                 as={NextLinkFromReactRouter}
-                to="https://pattie-pattiepad-organization.gitbook.io/pattiepad-launchpad/products/pattiepad/multisender"
+                to="https://fairbidai-fairbidai-organization.gitbook.io/fairbidai-launchpad/products/fairbidai/multisender"
                 target="_blink"
                 variant="secondary"
                 height="48px"
@@ -61,21 +61,21 @@ const MultisenderPage: React.FC<React.PropsWithChildren> = () => {
             </Flex>
           </Flex>
           <Box maxWidth="294px">
-            <img src="/images/pattie/Multisender.png" alt="sales" />
+            <img src="/images/fairbidai/Multisender.png" alt="sales" />
           </Box>
         </Flex>
       </PageHeader>
       <Flex justifyContent="center">
         <StyledAppBody my="24px">
           {modalView === CryptoFormView.Input ? (
-            <InputForm 
-              setModalView={setModalView} 
-              data={data} 
-              setData={setData} 
-              tag={tag} 
-              setTag={setTag} 
-              currency={currency} 
-              setCurrency={setCurrency} 
+            <InputForm
+              setModalView={setModalView}
+              data={data}
+              setData={setData}
+              tag={tag}
+              setTag={setTag}
+              currency={currency}
+              setCurrency={setCurrency}
             />
           ) : (
             <QuoteForm setModalView={setModalView} data={data} tag={tag} currency={currency} />

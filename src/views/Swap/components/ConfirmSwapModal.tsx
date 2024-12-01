@@ -33,7 +33,7 @@ const SwapTransactionErrorContent = ({ onDismiss, message, openSettingModal }) =
             </Text>
           </Text>
           <LinkExternal
-            href="https://pattie-pattiepad-organization.gitbook.io/pattiepad-launchpad"
+            href="https://fairbidai-fairbidai-organization.gitbook.io/fairbidai-launchpad"
             style={{ width: '100%', justifyContent: 'center' }}
           >
             What are the potential issues with the token?

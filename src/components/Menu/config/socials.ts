@@ -35,22 +35,22 @@ const config: (
       items: [
         {
           label: 'Twitter',
-          href: 'https://x.com/pattieswap',
+          href: 'https://x.com/fairbid',
           type: DropdownMenuItemType.EXTERNAL_LINK
         },
         {
           label: 'Telegram',
-          href: 'https://t.me/PattieswapChat',
+          href: 'https://t.me/fairbidChat',
           type: DropdownMenuItemType.EXTERNAL_LINK
         },
         {
           label: 'Reddit',
-          href: 'https://reddit.com/pattieswap',
+          href: 'https://reddit.com/fairbid',
           type: DropdownMenuItemType.EXTERNAL_LINK
         },
         {
           label: 'Docs',
-          href: 'https://pattie-pattiepad-organization.gitbook.io/pattiepad-launchpad/',
+          href: 'https://fairbid.gitbook.io/fairbid-launchpad/',
           type: DropdownMenuItemType.EXTERNAL_LINK
         },
       ].map((item) => addMenuItemSupported(item, chainId)),
