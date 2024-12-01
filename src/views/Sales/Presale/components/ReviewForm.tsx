@@ -165,7 +165,7 @@ export function ReviewForm({
             <Text>{socials.youtube}</Text>
           </Flex>}
         </Box>
-        <Message variant="warning" icon={false} p="8px 12px">
+        <Message variant="warning" icon={false} p="8px 12px 12px">
           <MessageText color="text">
             <span>Please exclude address {addresses.launchpadFactory[chainId]} from fees, rewards, max tx amount to start creating pools.</span>
           </MessageText>

@@ -224,7 +224,7 @@ export default function SendCommitButton({
                   Creating <CircleLoader stroke="white" />
                 </AutoRow> 
               : 
-                'Create Lock'
+                'Create Order'
             }
           </CommitButton>
         </StyledFlex>
@@ -249,7 +249,7 @@ export default function SendCommitButton({
               Creating <CircleLoader stroke="white" />
             </AutoRow>
           : 
-          'Create Lock')}
+          'Create Order')}
       </CommitButton>
     </StyledFlex>
   )

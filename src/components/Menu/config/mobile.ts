@@ -54,17 +54,17 @@ const config: (
         //   label: 'Launchpad',
         //   href: '/launchpad',
         // },
-        {
-          label: 'Token Creator',
-          href: '/token',
-        },
+        // {
+        //   label: 'Token Creator',
+        //   href: '/token',
+        // },
         // {
         //   label: 'Token Multi-sender',
         //   href: '/multisend',
         // },
         {
-          label: 'Token Locker',
-          href: '/lock',
+          label: 'Create Order',
+          href: '/marketplace/create',
         },
       ].map((item) => addMenuItemSupported(item, chainId)),
     },

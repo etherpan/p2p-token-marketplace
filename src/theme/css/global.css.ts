@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 import { globalStyle } from "@vanilla-extract/css";
 import { vars } from "theme/css/vars.css";
 

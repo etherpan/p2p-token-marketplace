@@ -82,22 +82,22 @@ const config: (
     // },
     {
       label: 'P2P Marketplace',
-      href: '/token',
+      href: '/marketplace',
       icon: MultisenderIcon,
       fillIcon: MultisenderIcon,
       image: '/images/decorations/pe2.png',
       items: [
-        {
-          label: 'Token Creator',
-          href: '/token'
-        },
+        // {
+        //   label: 'Token Creator',
+        //   href: '/token'
+        // },
         // {
         //   label: 'Token Multi-sender',
         //   href: '/multisend',
         // },
         {
-          label: 'Token Locker',
-          href: '/lock'
+          label: 'Create Order',
+          href: '/marketplace/create'
         },
       ].map((item) => addMenuItemSupported(item, chainId)),
     },

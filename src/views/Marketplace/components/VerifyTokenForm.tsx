@@ -136,7 +136,7 @@ export function VerifyTokenForm({
 
   return (
     <Box p="12px" position="inherit">
-      <AppHeader title='Create Lock' backTo="/lock" noConfig />
+      <AppHeader title='Create Order' backTo="/marketplace" noConfig />
       <FormContainer>
         <Box>
           <Box my="10px">
@@ -324,12 +324,12 @@ export function VerifyTokenForm({
             </Flex>
           </Box>}
         </Box>
-        <Message variant="warning" icon={false} p="8px 12px">
+        <Message variant="warning" icon={false} p="8px 12p">
           <MessageText color="text">
             <span>{`Please exclude lockup address ${addresses.locker[chainId]} from fees, rewards, max tx amount to start locking tokens. \nWe don't support rebase tokens.`}</span>
           </MessageText>
         </Message>
-        <Box mt="12px">
+        <Box mt="12px" className='p-4'>
           {!account ? <Button
             width="100%"
             variant='primary'

@@ -32,7 +32,7 @@ export const StyledAppBody = styled(Card)`
 
 const MAX_ITEMS = 10
 
-const Locks: React.FC<React.PropsWithChildren> = () => {
+const Marketplaces: React.FC<React.PropsWithChildren> = () => {
   const { address: account } = useAccount()
   const lengthForTokenLock = useTokenLockedCount()
   const lengthForLPLock = useLPLockedCount()
@@ -110,16 +110,16 @@ const Locks: React.FC<React.PropsWithChildren> = () => {
       <StyledAppBody>
         <Flex justifyContent="space-between" alignItems="center">
           <Text color="text">
-            Token Lock
+            Token Order
           </Text>
           <Button
             as={NextLinkFromReactRouter}
-            to="/lock/create"
+            to="/marketplace/create"
             variant='primary'
             width="150px"
             height="36px"
           >
-            Create Lock
+            Create Order
           </Button>
         </Flex>
         <Flex justifyContent="space-between" flexDirection={["column", "column", "column", "row"]} my="12px">
@@ -171,4 +171,4 @@ const Locks: React.FC<React.PropsWithChildren> = () => {
   )
 }
 
-export default Locks
+export default Marketplaces

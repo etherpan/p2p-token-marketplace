@@ -1,9 +1,10 @@
 import BigNumber from "bignumber.js";
 import { Dispatch, Fragment, SetStateAction } from "react";
-import { ArrowBackIcon, ArrowForwardIcon, Button, Flex, NextLinkFromReactRouter, Text, LinkExternal } from "components";
+import { ArrowBackIcon, ArrowForwardIcon, Button, Flex, NextLinkFromReactRouter, Text } from "components";
 import styled from "styled-components";
-import { useActiveChainId } from 'hooks/useActiveChainId'
-import { getBlockExploreLink } from 'utils'
+import { CHAIN_QUERY_NAME } from "config/chains";
+import { CurrencyLogo } from "components/Logo";
+import { useCurrency } from "hooks/Tokens";
 import Divider from "components/Divider";
 
 const ResponsiveGrid = styled.div`
@@ -11,15 +12,12 @@ const ResponsiveGrid = styled.div`
   grid-gap: 0.5em;
   align-items: center;
 
-  padding: 0 24px;
+  padding: 0 12px;
 
-  grid-template-columns: 3fr 2fr 3fr 1fr;
+  grid-template-columns: 4fr 3fr 1fr;
 
   @media screen and (max-width: 670px) {
-    grid-template-columns: 3fr 1fr 1fr;
-    & > *:nth-child(3) {
-      display: none;
-    }
+    grid-template-columns: 4fr 3fr 1fr;
   }
 `
 
@@ -29,7 +27,7 @@ const TableWrapper = styled(Flex)`
   flex-direction: column;
   background-color: ${({ theme }) => theme.card.background};
   border-radius: 8px;
-  // border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   ${({ theme }) => theme.mediaQueries.md} {
     border-radius: 8px;
   }
@@ -52,22 +50,21 @@ const Arrow = styled.div`
   }
 `
 
-const accountEllipsis = (address: string) => {
-  return address ? `${address.substring(0, 6)}...${address.substring(address.length - 4)}` : null
-}
-
-const DataRow: React.FC<React.PropsWithChildren<{ data: any}>> = ({ data }) => {
-  const {chainId} = useActiveChainId()
-  const url = `/lock/record/${data.id}`
+const DataRow: React.FC<React.PropsWithChildren<{ data: any, type: number }>> = ({ data, type }) => {
+  const token = useCurrency(data.address)
+  const url = type === 1 || type === 3 ? `/marketplace/record/${data.id}` : `/marketplace/token/${data.address}`
   return (
     <>
     <ResponsiveGrid>
-      <LinkExternal href={getBlockExploreLink(data.owner, 'address', chainId)}>
-        <Text color="primary">{accountEllipsis(data.owner)}</Text>
-      </LinkExternal>
-      <Text>{new BigNumber(data.amount).div(10 ** data.decimals).toJSON()}</Text>
-      <Text>{new Date(data.tgeDate * 1000).toLocaleString()}</Text>
-      <NextLinkFromReactRouter to={`${url}`}>
+      <Flex alignItems="center">
+        <CurrencyLogo size="30px" currency={token} />
+        <Flex flexDirection="column" ml="10px">
+          <Text small>{type !== 2 ? data.name : `${data.token0Name} / ${data.token1Name}`}</Text>
+          <Text color="textDisabled" small>{type !== 2 ? data.symbol : `${data.token0Symbol} / ${data.token1Symbol}`}</Text>
+        </Flex>
+      </Flex>
+      <Text fontWeight={400}>{new BigNumber(data.amount).div(10 ** (type === 0 || type === 1 ? data.decimals : 18)).toJSON()}</Text>
+      <NextLinkFromReactRouter to={`${url}?chain=${CHAIN_QUERY_NAME[data.chainId]}`}>
         <Button
           width="100%"
           variant="text"
@@ -81,29 +78,29 @@ const DataRow: React.FC<React.PropsWithChildren<{ data: any}>> = ({ data }) => {
 
 const MAX_ITEMS = 10
 
-const LockRecords: React.FC<
+const TokenLockTable: React.FC<
   React.PropsWithChildren<{
     data: any[]
     length: number
     page: number
     setPage: Dispatch<SetStateAction<number>>
+    type: number
   }>
-> = ({ data, length, page, setPage }) => {
+> = ({ data, length, page, setPage, type }) => {
   const maxPage = Number.isNaN(length) ? 1 : Math.floor(length / MAX_ITEMS) + (length % MAX_ITEMS === 0 ? 0 : 1)
 
   return (
     <TableWrapper>
       <ResponsiveGrid>
         <Text color="secondary" fontSize="12px" bold>
-          Wallet
+          Token
         </Text>
         <Text color="secondary" fontSize="12px" bold>
           Amount
         </Text>
         <Text color="secondary" fontSize="12px" bold>
-          Unlock time(UTC)
+          {" "}
         </Text>
-        <Text color="secondary" fontSize="12px" bold />
       </ResponsiveGrid>
 
       <Divider />
@@ -111,14 +108,14 @@ const LockRecords: React.FC<
       {data.map((row) => {
         if (row) {
           return (
-            <Fragment key={row.id}>
-              <DataRow data={row} />
+            <Fragment key={`${type === 1 || type === 3 ? row.id : row.address}`}>
+              <DataRow data={row} type={type} />
             </Fragment>
           )
         }
         return null
       })}
-      <PageButtons>
+      {(type === 0 || type === 2) && <PageButtons>
         <Arrow
           onClick={() => {
             setPage(page === 1 ? page : page - 1)
@@ -134,9 +131,9 @@ const LockRecords: React.FC<
         >
           <ArrowForwardIcon color={page === maxPage ? 'textDisabled' : 'primary'} />
         </Arrow>
-      </PageButtons>
+      </PageButtons>}
     </TableWrapper>
   )
 }
 
-export default LockRecords
+export default TokenLockTable

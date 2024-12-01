@@ -52,7 +52,7 @@ export function FinishForm({
         </Flex>
         <Flex width="100%" alignItems="center" flexDirection={["column", "column", "row"]} mt="10px">
           <Box mr={["0", "0", "15px"]} mb={["10px", "10px", "0"]} width="100%">
-            <NextLinkFromReactRouter to={`/lock/token/${finishData.token}`}>
+            <NextLinkFromReactRouter to={`/marketplace/token/${finishData.token}`}>
               <Button
                 width="100%"
                 height="36px"
@@ -61,7 +61,7 @@ export function FinishForm({
             </NextLinkFromReactRouter>
           </Box>
           <Box width="100%">
-            <NextLinkFromReactRouter to={`/lock/record/${finishData.id}`}>
+            <NextLinkFromReactRouter to={`/marketplace/record/${finishData.id}`}>
               <Button
                 width="100%"
                 height="36px"

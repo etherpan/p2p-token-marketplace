@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { CHAIN_IDS } from 'utils/wagmi'
-import LockById from 'views/Lock/LockById'
+import LockById from 'views/Marketplace/LockById'
 
 const LockByIdPage = () => {
 	const router = useRouter()

@@ -18,6 +18,7 @@ const Providers: React.FC<
   React.PropsWithChildren<{ store: Store; children: React.ReactNode; dehydratedState: any }>
 > = ({ children, store, dehydratedState }) => {
   const { resolvedTheme } = useNextTheme()
+  console.log("resolvedTheme", resolvedTheme)
   return (
     <WagmiProvider reconnectOnMount config={config}>
       <QueryClientProvider client={queryClient}>

@@ -39,7 +39,7 @@ createWeb3Modal({
   themeVariables: {
     '--w3m-color-mix': '#443D37',
     '--w3m-color-mix-strength': 40,
-    '--w3m-accent': '#e6ac00',
+    '--w3m-accent': '#22bec6',
     '--w3m-border-radius-master': '1.5px'
   }
 })

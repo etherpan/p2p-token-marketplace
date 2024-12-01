@@ -425,7 +425,7 @@ const Sales: React.FC<React.PropsWithChildren> = () => {
       </Flex>
       <Box mt="40px">
         <Text>
-          Disclaimer: FairBid AI will never endorse or encourage that you invest in any of the projects listed and therefore, accept no liability for any loss occasioned. It is the user(s) responsibility to do their own research and seek financial advice from a professional. More information about (DYOR) can be found via <a href='https://academy.binance.com/en/glossary/do-your-own-research' style={{ color: "#FFAC26" }}>Binance Academy</a>.
+          Disclaimer: FairBid AI will never endorse or encourage that you invest in any of the projects listed and therefore, accept no liability for any loss occasioned. It is the user(s) responsibility to do their own research and seek financial advice from a professional. More information about (DYOR) can be found via <a href='https://academy.binance.com/en/glossary/do-your-own-research' style={{ color: "#29bcc3" }}>Binance Academy</a>.
         </Text>
         <Box width="100%" mt="20px" style={{ textAlign: "center" }}>
           <a href='https://www.certik.com' target='_blank' rel="noreferrer">
