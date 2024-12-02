@@ -2,7 +2,7 @@ import { useCallback } from 'react'
 import BigNumber from 'bignumber.js'
 import { addWhiteList, cancel, contributeForETH, contributeForToken, disableWhitelist, enableWhitelist, finalize, removeWhiteList, updateInfo, claim, withdraw, emergencyWithdraw } from 'utils/calls/launchpad'
 import { useLaunchpad } from 'hooks/useContracts'
-import { parseEther } from 'viem'
+// import { parseEther } from 'viem'
 import { useWalletClient } from 'wagmi'
 
 const usePool = (launchpad: `0x${string}`, isNative: boolean) => {

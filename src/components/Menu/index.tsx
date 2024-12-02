@@ -7,8 +7,8 @@ import { GTOKEN } from 'libraries/tokens'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import useBUSDPrice from 'hooks/useBUSDPrice'
 import { useRouter } from 'next/router'
-import { Button } from 'components/Button';
-import { Box, Flex } from 'components/Box';
+// import { Button } from 'components/Button';
+// import { Box, Flex } from 'components/Box';
 import { usePhishingBanner } from 'utils/user'
 import { useMatchBreakpoints } from 'contexts';
 import { useMenuItems } from './hooks/useMenuItems'

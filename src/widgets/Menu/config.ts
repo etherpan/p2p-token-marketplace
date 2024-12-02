@@ -5,7 +5,7 @@ import {
 	// InstagramIcon,
 	// GithubIcon,
 	ResourcesIcon,
-	DiscordIcon,
+	// DiscordIcon,
 	// MediumIcon,
 	// YoutubeIcon,
 } from "components/Svg";

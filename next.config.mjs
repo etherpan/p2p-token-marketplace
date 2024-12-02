@@ -116,3 +116,7 @@ const config = {
 
 // export default withBundleAnalyzer(withVanillaExtract(withSentryConfig(withAxiom(config), sentryWebpackPluginOptions)))
 export default withVanillaExtract(config)
+
+// module.exports = {
+//   distDir: 'build', // Example of custom output directory
+// };

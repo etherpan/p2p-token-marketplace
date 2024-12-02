@@ -1,4 +1,5 @@
-import { DropdownMenuItemType, MenuItemsType } from 'widgets/Menu'
+// import { DropdownMenuItemType, MenuItemsType } from 'widgets/Menu'
+import { MenuItemsType } from 'widgets/Menu'
 import { DropdownMenuItems } from 'components/DropdownMenu'
 import {
   TradeIcon

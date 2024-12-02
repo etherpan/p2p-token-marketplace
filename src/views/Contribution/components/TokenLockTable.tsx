@@ -32,25 +32,25 @@ const TableWrapper = styled(Flex)`
   }
 `
 
-const PageButtons = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0.2em;
-  margin-bottom: 1.2em;
-`
+// const PageButtons = styled.div`
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin-top: 0.2em;
+//   margin-bottom: 1.2em;
+// `
 
-const Arrow = styled.div`
-  color: ${({ theme }) => theme.colors.primary};
-  padding: 0 20px;
-  :hover {
-    cursor: pointer;
-  }
-`
+// const Arrow = styled.div`
+//   color: ${({ theme }) => theme.colors.primary};
+//   padding: 0 20px;
+//   :hover {
+//     cursor: pointer;
+//   }
+// `
 
 const DataRow: React.FC<React.PropsWithChildren<{ data: any}>> = ({ data }) => {
-  const pair = useCurrency(data.pair)
+  // const pair = useCurrency(data.pair)
   const url = `/cp/id/${data.id}`
   const primaryToken = useToken(data.token0)
   const secondaryToken = useToken(data.token1)

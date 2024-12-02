@@ -60,7 +60,7 @@ const DepositModal: React.FC<React.PropsWithChildren<DepositModalProps>> = ({
     const max = data.maxBuy === 0 || data.maxBuy > (data.userData?.balance ?? 0) ? data.userData?.balance : data.maxBuy
     return getFullDisplayBalance(new BigNumber(max ?? 0), buyToken.decimals)
   }, [data, buyToken])
-  console.log("debug userdata", data?.userData)
+  // console.log("debug userdata", data?.userData)
   const addLiquidityUrl = `/swap?outputCurrency=${buyToken.isNative ? buyToken.symbol : buyToken.wrapped.address}` 
 
   const needEnable = useMemo(() => {
