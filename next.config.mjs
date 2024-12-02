@@ -39,18 +39,18 @@ const config = {
     configs.externals.push('pino-pretty', 'lokijs', 'encoding')    
     return configs
   },
-  async rewrites() {
-    return [
-      {
-        source: '/info/token/:address',
-        destination: '/info/tokens/:address',
-      },
-      {
-        source: '/info/pool/:address',
-        destination: '/info/pools/:address',
-      },
-    ]
-  },
+  // async rewrites() {
+    // return [
+    //   {
+    //     source: '/info/token/:address',
+    //     destination: '/info/tokens/:address',
+    //   },
+    //   {
+    //     source: '/info/pool/:address',
+    //     destination: '/info/pools/:address',
+    //   },
+    // ]
+  // },
   async headers() {
     return [
       {
@@ -73,45 +73,45 @@ const config = {
       }
     ]
   },
-  async redirects() {
-    return [
-      {
-        source: '/send',
-        destination: '/swap',
-        permanent: true,
-      },
-      {
-        source: '/swap/:outputCurrency',
-        destination: '/swap?outputCurrency=:outputCurrency',
-        permanent: true,
-      },
-      {
-        source: '/create/:currency*',
-        destination: '/add/:currency*',
-        permanent: true,
-      },
-      {
-        source: '/farms/archived',
-        destination: '/farms/history',
-        permanent: true,
-      },
-      {
-        source: '/staking',
-        destination: '/pools',
-        permanent: true,
-      },
-      {
-        source: '/info/pools',
-        destination: '/info/pairs',
-        permanent: true,
-      },
-      {
-        source: '/info/pools/:address',
-        destination: '/info/pairs/:address',
-        permanent: true,
-      },
-    ]
-  },
+  // async redirects() {
+  //   return [
+      // {
+      //   source: '/send',
+      //   destination: '/swap',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/swap/:outputCurrency',
+      //   destination: '/swap?outputCurrency=:outputCurrency',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/create/:currency*',
+      //   destination: '/add/:currency*',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/farms/archived',
+      //   destination: '/farms/history',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/staking',
+      //   destination: '/pools',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/info/pools',
+      //   destination: '/info/pairs',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/info/pools/:address',
+      //   destination: '/info/pairs/:address',
+      //   permanent: true,
+      // },
+    // ]
+  // },
 }
 
 // export default withBundleAnalyzer(withVanillaExtract(withSentryConfig(withAxiom(config), sentryWebpackPluginOptions)))
