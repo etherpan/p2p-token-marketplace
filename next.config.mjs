@@ -13,18 +13,21 @@ const config = {
   compiler: {
     styledComponents: true,
   },
-  // experimental: {
-  //   scrollRestoration: true,
-  //   outputFileTracingRoot: path.join(__dirname, '../../'),
-  //   outputFileTracingExcludes: {
-  //     '*': ['**@swc+core*', '**/@esbuild**'],
-  //   },
-  //   transpilePackages: [
-  //     '@wagmi',
-  //     'wagmi',
-  //     '@ledgerhq'
-  //   ],
-  // },
+  experimental: {
+    scrollRestoration: true,
+    outputFileTracingRoot: path.join(__dirname, '../../'),
+    outputFileTracingExcludes: {
+      '*': ['**@swc+core*', '**/@esbuild**'],
+    },
+    transpilePackages: [
+      '@wagmi',
+      'wagmi',
+      '@ledgerhq'
+    ],
+    fallbackNodePolyfills: {
+      fallbackNodePolyfills: false,
+    }
+  },
   staticPageGenerationTimeout: 1000,
   reactStrictMode: true,
   swcMinify: true,
